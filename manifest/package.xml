@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <!--<types>
-        <members>*</members>
+    <types>
+        <members>combineMap</members>
         <name>ApexClass</name>
-    </types>-->
+    </types>
     <types>
         <members>combineMap</members>
         <name>AuraDefinitionBundle</name>
