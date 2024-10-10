@@ -5,7 +5,7 @@ public class combineMap {
         Map<String,Set<String>> returnMap = new Map<String,Set<String>>();
 
         AuraWrapper returnWrapper = new AuraWrapper();
-        returnWrapper.ruleCodeMapInfo = returnMap;
+        returnWrapper.ruleCodeMapInfo = evaluateRuleCode();
 
         return returnWrapper;
     }
@@ -13,5 +13,13 @@ public class combineMap {
     public class AuraWrapper{
         @AuraEnabled
         public Map<String,Set<String>> ruleCodeMapInfo  {get;set;}
+    }
+
+    private static Map<String,Set<String>> evaluateRuleCode(){
+        Map<String,Set<String>> returnMap = new Map<String,Set<String>>();
+
+        returnMap.put('SFDC-CASE-001',new Set<String>{'POL-0001','POL-0002'});
+
+        return returnMap;
     }
 }
