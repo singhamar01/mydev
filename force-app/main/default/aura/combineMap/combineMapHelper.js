@@ -12,8 +12,13 @@
             if (state === "SUCCESS") {
                 // Alert the user with the value returned 
                 // from the server
-                alert("From server: " + response.getReturnValue());
-
+                console.log("From server: " + JSON.stringify(response.getReturnValue()));
+				var ruleCodeObj = response.getReturnValue().ruleCodeMapInfo;
+				console.log(JSON.stringify(ruleCodeObj));
+				const map = new Map;
+				const set = new Set;
+				
+				console.log('map:'+JSON.stringify(map));
                 // You would typically fire a event here to trigger 
                 // client-side notification that the server-side 
                 // action is complete
