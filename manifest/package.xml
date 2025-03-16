@@ -5,5 +5,11 @@
         <members>ViSF_Case_New_Button</members>
         <name>AuraDefinitionBundle</name>
     </types>
+    <types>
+        <members>mortgage</members>
+        <members>viewSource</members>
+        <members>miscSharedJavaScript</members>
+        <name>LightningComponentBundle</name>
+    </types>
     <version>61.0</version>
 </Package>
