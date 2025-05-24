@@ -2,10 +2,17 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <types>
-        <members>myFamilyTreeHomePage</members>
+        <! -- <members>myFamilyTreeHomePage</members> -->
+        <members>myHomeComponent</members>
         <members>myLawn</members>
         <members>myPorch</members>
+        <members>myHomeComponentApex</members>
         <name>LightningComponentBundle</name>
+    </types>
+    <!-- ApexClass -->
+    <types>
+        <members>PersonController</members>
+        <name>ApexClass</name>
     </types>
     <version>61.0</version>
 </Package>
