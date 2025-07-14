@@ -1,17 +1,5 @@
 <template>   
-    <lightning-card title="My Family Tree" icon-name="custom:custom14">     
-        <p class="slds-p-horizontal_small">
-            Welcome, To my Family Tree Home Page! Modified using @wire decorator.
-        </p>
-        <template if:true={persons}>
-            <ul>
-                <template for:each={persons} for:item="person">
-                    <li key={person.Id}>{person.Name}</li>
-                </template>
-            </ul>
-        </template>
-        <template if:true={error}>
-            <p class="slds-text-color_error">Error loading persons.</p>
-        </template>
+    <lightning-card title="Welcome" icon-name="custom:custom14">     
+    <p class="slds-p-horizontal_small">Hello, Salesforce!</p>   
     </lightning-card> 
 </template>

@@ -1,0 +1,26 @@
+.calculator-display {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 2.5rem; /* Larger font for display */
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+    gap: 0.5rem; /* Space between buttons */
+}
+
+/* Style for the Clear button to span all columns */
+.slds-col_span-4 {
+    grid-column: span 4;
+}
+
+/* Adjust button size for better calculator feel */
+lightning-button {
+    height: 3.5rem; /* Make buttons taller */
+}

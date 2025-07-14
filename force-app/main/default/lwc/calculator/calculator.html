@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Simple LWC Calculator" icon-name="utility:richtextbulletedlist">
+        <div class="slds-p-around_medium">
+            <div class="slds-box slds-text-align_right slds-var-m-bottom_medium calculator-display">
+                <p class="slds-text-heading_medium">{currentInput}</p>
+            </div>
+
+            <div class="calculator-grid">
+                <lightning-button label="7" onclick={handleNumberClick} data-value="7"></lightning-button>
+                <lightning-button label="8" onclick={handleNumberClick} data-value="8"></lightning-button>
+                <lightning-button label="9" onclick={handleNumberClick} data-value="9"></lightning-button>
+                <lightning-button label="/" onclick={handleOperatorClick} data-value="/"></lightning-button>
+
+                <lightning-button label="4" onclick={handleNumberClick} data-value="4"></lightning-button>
+                <lightning-button label="5" onclick={handleNumberClick} data-value="5"></lightning-button>
+                <lightning-button label="6" onclick={handleNumberClick} data-value="6"></lightning-button>
+                <lightning-button label="*" onclick={handleOperatorClick} data-value="*"></lightning-button>
+
+                <lightning-button label="1" onclick={handleNumberClick} data-value="1"></lightning-button>
+                <lightning-button label="2" onclick={handleNumberClick} data-value="2"></lightning-button>
+                <lightning-button label="3" onclick={handleNumberClick} data-value="3"></lightning-button>
+                <lightning-button label="-" onclick={handleOperatorClick} data-value="-"></lightning-button>
+
+                <lightning-button label="." onclick={handleDecimalClick}></lightning-button>
+                <lightning-button label="0" onclick={handleNumberClick} data-value="0"></lightning-button>
+                <lightning-button label="=" onclick={handleEqualsClick}></lightning-button>
+                <lightning-button label="+" onclick={handleOperatorClick} data-value="+"></lightning-button>
+
+                <lightning-button label="Clear" onclick={handleClearClick} class="slds-col_span-4"></lightning-button>
+            </div>
+
+            <template if:true={history.length}>
+                <div class="slds-var-m-top_large">
+                    <h3 class="slds-text-heading_small slds-var-m-bottom_small">Calculation History</h3>
+                    <lightning-layout multiple-rows="true" class="slds-var-m-bottom_small">
+                        <template for:each={history} for:item="item">
+                            <lightning-layout-item key={item.expression} flexibility="auto" class="slds-size_1-of-1 slds-p-vertical_xx-small">
+                                <p>{item.expression} = <strong>{item.result}</strong></p>
+                            </lightning-layout-item>
+                        </template>
+                    </lightning-layout>
+                    <lightning-button label="Clear History" onclick={handleClearHistoryClick}></lightning-button>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

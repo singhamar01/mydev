@@ -2,7 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <types>
-        <! -- <members>myFamilyTreeHomePage</members> -->
+        <members>calculator</members>
         <members>myHomeComponent</members>
         <members>myLawn</members>
         <members>myPorch</members>
@@ -12,6 +12,7 @@
     <!-- ApexClass -->
     <types>
         <members>PersonController</members>
+        <members>myCalculator</members>
         <name>ApexClass</name>
     </types>
     <version>61.0</version>
